@@ -1,0 +1,12 @@
+.add-form-container{
+  text-align: center;
+  margin-top:20px;
+}
+mat-list-item{
+  text-align:center;
+  border-bottom: 1px solid grey;
+}
+
+button{
+  text-align: right;
+}

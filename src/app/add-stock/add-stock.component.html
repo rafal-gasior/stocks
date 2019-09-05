@@ -1,0 +1,24 @@
+<div class="add-form-container">
+  <div class="stocks-example-text">
+    You can use f.e.: PAYC, QTWO, CRM, SHOP...
+  </div>
+  <div class="stocks-example-address">
+    For more examples, go: <a href="https://github.com/angular-in-action/api/blob/master/companies.csv">companies.csv</a>
+  </div>
+<form  (submit)="add()">
+    <input name="stock" placeholder="Stock name" [(ngModel)]="symbol" value="">
+  <button mat-raised-button color="primary">ADD STOCK</button>
+  </form>
+
+
+<!--
+<app-stock-list>
+<p>parent!</p>
+</app-stock-list>
+-->
+  <mat-list class="container" role="list">
+    <mat-list-item role="listitem" *ngFor="let symbol of symbols">{{symbol}}  <button mat-raised-button (click)="remove(symbol)" color="primary" class="right">Remove stock</button></mat-list-item>
+  </mat-list>
+
+
+</div>
