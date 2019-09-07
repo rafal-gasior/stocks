@@ -1,24 +1,33 @@
-<div class="add-form-container">
-  <div class="stocks-example-text">
-    You can use f.e.: PAYC, QTWO, CRM, SHOP...
-  </div>
-  <div class="stocks-example-address">
+<div class="add-form-container container">
+  <div class="title mat-headline">Add stock to your Home Panel</div>
+
+  <div class="stocks-example-text mat-body-1">
+    This API returns a snapshot of the stocks passed as a symbol parameter. It uses Yahoo! Finance to lookup the snapshot data. You can use f.e.: PAYC, QTWO, CRM, SHOP...
     For more examples, go: <a href="https://github.com/angular-in-action/api/blob/master/companies.csv">companies.csv</a>
   </div>
-<form  (submit)="add()">
-    <input name="stock" placeholder="Stock name" [(ngModel)]="symbol" value="">
-  <button mat-raised-button color="primary">ADD STOCK</button>
-  </form>
-
 
 <!--
 <app-stock-list>
 <p>parent!</p>
 </app-stock-list>
 -->
-  <mat-list class="container" role="list">
-    <mat-list-item role="listitem" *ngFor="let symbol of symbols">{{symbol}}  <button mat-raised-button (click)="remove(symbol)" color="primary" class="right">Remove stock</button></mat-list-item>
+  <mat-list class="container mat-h2" role="list">
+    <mat-list-item role="listitem" *ngFor="let symbol of symbols">{{symbol}}
+      <button mat-icon-button color="primary" (click)="remove(symbol)" aria-label="Remove stock">
+        <mat-icon>delete</mat-icon>
+      </button>
+      </mat-list-item>
   </mat-list>
+
+
+  <form  (submit)="add()" class="center">
+    <mat-form-field>
+  <input  name="stock" matInput placeholder="Stock name" [(ngModel)]="symbol" value="">
+</mat-form-field>
+
+    <!--  <input name="stock" placeholder="Stock name" [(ngModel)]="symbol" value="">-->
+    <br><button mat-raised-button color="primary" class="add_stock_button">ADD STOCK</button>
+    </form>
 
 
 </div>

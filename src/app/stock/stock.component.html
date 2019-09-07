@@ -1,19 +1,20 @@
-<div class="col s6 m4 l1">
+
 <mat-card class="example-card" colorChange [change]="stock.change">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>{{stock.symbol}}</mat-card-title>
-    <mat-card-subtitle>change: {{stock.change}}</mat-card-subtitle>
+    <mat-card-subtitle>Change: {{stock.change | currency: 'USD':'symbol':'.2'}}
+    <br>Percent: {{stock.changeInPercent | percent :'.2'}}</mat-card-subtitle>
   </mat-card-header>
   <!--<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
   <mat-card-content>
-    <p>lastTradePriceOnly:
-      {{stock.lastTradePriceOnly}}
+    <p>Last Trade Price:
+      {{stock.lastTradePriceOnly | currency: 'USD' : 'symbol' : '.2'}}
     </p>
+
   </mat-card-content>
   <mat-card-actions>
     <button mat-button>LIKE</button>
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card>
-</div>

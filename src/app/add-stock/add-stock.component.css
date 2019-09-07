@@ -1,12 +1,25 @@
 .add-form-container{
-  text-align: center;
+  text-align: left;
   margin-top:20px;
 }
 mat-list-item{
   text-align:center;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #8080800f;
+}
+mat-list{
+  border: 2px solid #8080800f;
+  border-radius: 20px;
+  margin-top:20px;
 }
 
 button{
   text-align: right;
 }
+.title{
+}
+form{
+  padding:20px;
+}
+.add_stock_button{
+  margin: 20px;
+  }
