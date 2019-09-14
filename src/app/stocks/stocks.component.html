@@ -1,3 +1,5 @@
-<mat-grid-list cols="3" rowHeight="250px">
- <mat-grid-tile *ngFor="let stock of stocks" ><app-stock [stock]="stock"></app-stock></mat-grid-tile>
+<mat-grid-list cols="1" rowHeight="250px" class="container">
+  <mat-grid-tile class="" [colspan]="1" [rowspan]="1" *ngFor="let stock of stocks">
+    <app-stock [stock]="stock"></app-stock>
+  </mat-grid-tile>
 </mat-grid-list>

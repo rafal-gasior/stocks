@@ -16,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { AddStockComponent } from './add-stock/add-stock.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { ColorDirective } from './directives/color.directive';
+import { StockMoreComponent } from './stock-more/stock-more.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ColorDirective } from './directives/color.directive';
     HomeComponent,
     AddStockComponent,
     StockListComponent,
-    ColorDirective
+    ColorDirective,
+    StockMoreComponent
   ],
   imports: [
     BrowserModule,

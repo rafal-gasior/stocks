@@ -6,10 +6,13 @@ mat-list-item{
   text-align:center;
   border-bottom: 1px solid #8080800f;
 }
+mat-list-item > div{
+  justify-content: space-between;
+}
 mat-list{
   border: 2px solid #8080800f;
-  border-radius: 20px;
-  margin-top:20px;
+  border-radius: 5px;
+  margin: 20px 0px 0px 0px;
 }
 
 button{

@@ -1,5 +1,5 @@
 .example-card {
-  max-width: 400px;
+  width: 100%;
   will-change: transform;
   transition: transform 1s ease-in-out;
 }
@@ -20,6 +20,6 @@
   opacity: 1;
 }
 .example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-image: url('../../assets/stocks-icon.png');
   background-size: cover;
 }

@@ -4,5 +4,5 @@
 @import "m.modified.css";
 body{margin: 0;}
 .mat-list-item-content{
-  display: inline !important;
+  justify-content: space-between;
 }

@@ -6,19 +6,19 @@ import { Directive, Input, ElementRef, OnInit, HostListener} from '@angular/core
 export class ColorDirective implements OnInit {
   @Input()
   change = 0;
-  plusColor = 'green';
-  minusColor = 'red';
+  plusColor = 'green-text';
+  minusColor = 'red-text';
   constructor(private el : ElementRef) {
 
   }
 
   ngOnInit(){
     if(this.change < 0){
-        this.el.nativeElement.classList.remove(this.plusColor);
-          this.el.nativeElement.classList.add(this.minusColor);
+        this.el.nativeElement.querySelector('mat-card-title').classList.remove(this.plusColor);
+          this.el.nativeElement.querySelector('mat-card-title').classList.add(this.minusColor);
     } else {
-      this.el.nativeElement.classList.add(this.plusColor);
-        this.el.nativeElement.classList.remove(this.minusColor);
+      this.el.nativeElement.querySelector('mat-card-title').classList.add(this.plusColor);
+        this.el.nativeElement.querySelector('mat-card-title').classList.remove(this.minusColor);
     }
   }
 
